@@ -78,3 +78,11 @@ if initial_state == final_state:
     print("Teleportation successful")
 else:
     print("Teleportation failed") 
+    
+    
+# Measure the qubits after teleportation
+circuit.measure(q, c)
+
+# Run the circuit with the measurement
+measurement_result = execute(circuit, backend, shots=1).result().get_counts(circuit)
+print("Measurement result after teleportation: ", measurement_result)
