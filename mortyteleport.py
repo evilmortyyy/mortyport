@@ -40,6 +40,10 @@ for i in range(0, num_qubits-2, 3):
     circuit.h(q[i+1])
     circuit.measure(q[i+1], c[i+1])
     circuit.measure(q[i], c[i])
+    circuit.barrier()
+    circuit.cx(q[i+1],q[i+2])
+    circuit.cz(q[i],q[i+2])
+    circuit.barrier()
 
 # Choose a backend to run the circuit on
 backend = Aer.get_backend('qasm_simulator')
