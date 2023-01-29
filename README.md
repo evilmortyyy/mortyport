@@ -18,3 +18,5 @@ This will teleport the hex string "01" and output the initial state and final st
 ## Output
 
 The program will output the initial state and final state of the qubits, as well as the measurement outcome and whether or not the teleportation was successful.
+
+![Imgur Image](https://i.imgur.com/meJ37et.png)
